@@ -1,0 +1,174 @@
+:root{
+    --cor1: #33D6A5;
+    --cor2: #3C9D80;
+    --cor3: #218A6A;
+    --cor4: #74D6B9;
+    --cor5: #155743;
+}
+body{
+    box-sizing: border-box;
+    background-color: var(--cor4);
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo h1{
+    color: var(--cor5);
+}
+header img{
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+    transition: 9s;
+}
+header img:hover{
+    transform: rotate(360deg);
+    
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 200px;
+    margin-right: 250px;
+}
+header a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    transition: .5s;
+    margin-left: 10px;
+    color: #155743;
+}
+header a:hover{
+    background: var(--cor5);
+    color: var(--cor4);
+    border-radius: 10px;
+    transform: translate(-10px);
+}
+@media(max-width: 990px){
+    .logo{
+        display: none;        
+    }
+    ul a{
+        display: none;
+    }
+
+}
+/* FIM DO HAEADER */
+
+/* INICIO DO SOBRE */
+.sobre{
+    display: flex;
+}
+.sobre .imagem{
+    background: url(imagens/mini.campo.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 1900px;
+    height: 600px;
+}
+
+
+
+
+/* FIM SOBRE */
+
+/* INICIO MENSALISTAS */
+.mensalistas ul{
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container .card{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity:0;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .content h2 {
+    position: absolute;
+    top: -120px;
+    right: 20px;
+    font-size: 70px;
+    color: rgba(125, 125, 125, 0.4);
+    pointer-events: none;
+}
+
+.container .card .content h3 {
+    margin: 5px;
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 10;
+}
+
+.container .card .content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 30px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.info .aberto{
+    display: block;
+}
